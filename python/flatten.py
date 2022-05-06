@@ -1,3 +1,11 @@
+"""
+Bir listeyi düzleştiren (flatten) fonksiyon yazın. 
+Elemanları birden çok katmanlı listelerden ([[3],2] gibi) oluşabileceği gibi, non-scalar verilerden de oluşabilir.
+Örnek olarak:
+    input: [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+    output: [1,'a','cat',2,3,'dog',4,5]
+"""
+
 
 def flatten(arr: list, newarr=[]) -> list:
     for i in arr:
@@ -10,15 +18,3 @@ def flatten(arr: list, newarr=[]) -> list:
 
 l = [[1, 'a', ['cat'], 2], [[[3]], 'dog'], 4, 5]
 print(flatten(l))  # [1, 'a', 'cat', 2, 3, 'dog', 4, 5]
-
-
-def reverse(arr):
-    arr.reverse()
-    for i in arr:
-        if type(i) == type([]):
-            reverse(i)
-    return arr
-
-
-r = [[1, 2], [[5, 6, 7]], [3, 4], [5, 6, 7]]
-print(reverse(r))  # [[7, 6, 5], [4, 3], [[7, 6, 5]], [2, 1]]
