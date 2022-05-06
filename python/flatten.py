@@ -1,8 +1,3 @@
-from hashlib import new
-
-
-l = [[1, 'a', ['cat'], 2], [[[3]], 'dog'], 4, 5]
-
 
 def flatten(arr: list, newarr=[]) -> list:
     for i in arr:
@@ -13,14 +8,17 @@ def flatten(arr: list, newarr=[]) -> list:
     return newarr
 
 
-r = [[1, 2],[[5,6,7]], [3, 4], [5, 6, 7]]
+l = [[1, 'a', ['cat'], 2], [[[3]], 'dog'], 4, 5]
+print(flatten(l))  # [1, 'a', 'cat', 2, 3, 'dog', 4, 5]
 
 
 def reverse(arr):
     arr.reverse()
     for i in arr:
-        if type(i)==type([]):
-           reverse(i)
+        if type(i) == type([]):
+            reverse(i)
     return arr
 
-print(reverse(r))
+
+r = [[1, 2], [[5, 6, 7]], [3, 4], [5, 6, 7]]
+print(reverse(r))  # [[7, 6, 5], [4, 3], [[7, 6, 5]], [2, 1]]
