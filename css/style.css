@@ -1,0 +1,101 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+
+
+}
+
+header,
+main {
+    text-align: center;
+    width: 90%;
+    padding: 2px;
+}
+
+main {
+    background-color: #EEEEEE;
+}
+
+main>* {
+    margin: 0;
+    padding: 0;
+
+}
+
+/* p,
+section {
+    margin: 0;
+    padding: 0;
+} */
+
+input[type="search"] {
+    width: 350px;
+
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding: 0;
+}
+
+nav {
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3px;
+    width: 100%;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    width: 38%;
+    background-color: #7EE5DA;
+
+}
+
+.center {
+    width: 24%;
+    background-color: #70CCC2;
+    font-size: smaller;
+}
+
+.right {
+    width: 38%;
+    background-color: #7EE5DA;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+    margin: 5px;
+}
+
+.right>ul>li {
+    text-align: center;
+    font-style: bold;
+    font-size: small;
+}
+
+input[type="email"] {
+    width: 180px;
+    margin: 1px;
+}
+
+footer>small {
+    margin-top: 20px;
+    text-align: center;
+}
