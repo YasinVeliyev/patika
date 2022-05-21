@@ -16,22 +16,23 @@ function render() {
     });
 }
 
-function createListElement(input) {
+function createListElement(task) {
     let lists = JSON.parse(localStorage.getItem("lists")) || [];
     let li = document.createElement("li");
-    li.innerHTML = `${input.value.trim()} <div class='liclose'><button type="button"><span aria-hidden="true">&times;</span></button></div>`;
-    lists.push(input.value.trim());
+    li.innerHTML = `${task} <div class='liclose'><button type="button"><span aria-hidden="true">&times;</span></button></div>`;
+    lists.push(task);
     list.appendChild(li);
     li.firstElementChild.addEventListener("click", deleteList);
-    input.value = "";
     localStorage.setItem("lists", JSON.stringify(lists));
     $("#liveToast").toast("show");
 }
 
 function newElement() {
     let input = document.querySelector("#task");
-    if (input.value.trim()) {
-        createListElement(input);
+    let task = input.value.trim();
+    input.value = "";
+    if (task) {
+        createListElement(task);
     } else {
         $(".toast.error").toast("show");
     }
