@@ -1,44 +1,54 @@
-let list=document.querySelector("#list")
-let liveToast = document.querySelector("#liveToast")
+let list = document.querySelector("#list");
+let liveToast = document.querySelector("#liveToast");
 
+render();
+function render() {
+    JSON.parse(localStorage.getItem("lists")).forEach((item) => {
+        let li = document.createElement("li");
+        li.innerText = item;
+        list.appendChild(li);
+    });
+    let lists = document.querySelectorAll("li");
+    lists.forEach((item) => {
+        item.innerHTML += `<div class='liclose'><button type="button"><span >&times;</span></button></div>`;
+        item.addEventListener("click", checked);
+        item.firstElementChild.addEventListener("click", deleteList);
+    });
+}
 
-document.querySelectorAll("li").forEach((item)=>{
-    item.innerHTML+=`<div class='liclose'>
-    <button type="button">
-      <span >&times;</span>
-    </button>
-  </div>`
-  item.addEventListener('click',checked)
-  item.firstElementChild.addEventListener('click',deleteList)
-})
+function createListElement(input) {
+    let lists = JSON.parse(localStorage.getItem("lists")) || [];
+    let li = document.createElement("li");
+    li.innerHTML = `${input.value.trim()} <div class='liclose'><button type="button"><span aria-hidden="true">&times;</span></button></div>`;
+    lists.push(input.value.trim());
+    list.appendChild(li);
+    li.firstElementChild.addEventListener("click", deleteList);
+    input.value = "";
+    localStorage.setItem("lists", JSON.stringify(lists));
+    $("#liveToast").toast("show");
+}
 
-
-
-function newElement(){
+function newElement() {
     let input = document.querySelector("#task");
-    if(input.value.trim()){
-        let li=document.createElement("li");
-        li.innerHTML = `${input.value.trim()} <div class='liclose'>
-        <button type="button">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>`
-        list.appendChild(li)
-        li.firstElementChild.addEventListener("click",deleteList)
-        input.value=""
-        $('#liveToast').toast('show')
-        
-    }
-    else{
-        $('.toast.error').toast('show')
+    if (input.value.trim()) {
+        createListElement(input);
+    } else {
+        $(".toast.error").toast("show");
     }
 }
 
-
-function checked(event){
-    event.currentTarget.classList.toggle("checked")
+function checked(event) {
+    event.currentTarget.classList.toggle("checked");
 }
 
-function deleteList(event){
-    event.currentTarget.parentElement.remove()
+function deleteList(event) {
+    localStorage.setItem(
+        "lists",
+        JSON.stringify(
+            JSON.parse(localStorage.getItem("lists")).filter((data) => {
+                data == event.currentTarget.parentElement.firstChild;
+            }),
+        ),
+    );
+    event.currentTarget.parentElement.remove();
 }
