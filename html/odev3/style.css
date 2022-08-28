@@ -1,0 +1,58 @@
+html{
+    background-color: #e0c9a9;
+    color:#42392b;
+}
+header{
+    width: 75%;
+}
+
+h1{color: #bd8651;}
+
+article{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+
+#title>small>b{
+    color:#ae4114;
+}
+
+.tarif{
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+}
+
+.tarif>*{
+    margin:5px;
+}
+
+h5{ 
+    color:#eff5fa;
+    background-color:#963102 ;
+    border-radius: 10px;
+    padding: 2px;
+    font-size: small;
+    width: fit-content;
+}
+
+
+
+dt,dd{
+    margin: 0;
+}
+li{
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+footer{
+    text-align: right;
+    padding-right: 25%;
+    font-family:"Roboto Mono", monospace;
+}
