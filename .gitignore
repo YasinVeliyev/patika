@@ -7,3 +7,4 @@
 */.vs
 *.xml
 */.ipynb_checkpoints
+*/node_modules
