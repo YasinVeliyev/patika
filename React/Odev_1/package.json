@@ -1,0 +1,13 @@
+{
+  "name": "Odev_1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/YasinVeliyev/patika/tree/main/React",
+  "author": "Yasin Vəliyev",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {"start":"node index"},
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
