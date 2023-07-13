@@ -1,0 +1,17 @@
+type: theory
+custom_name: "  Step 2: Defining a Procedural Macro"
+files:
+- name: src/lib.rs
+  visible: true
+  learner_created: false
+- name: Cargo.toml
+  visible: true
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfLeNP6smm0GZHwryUgzSSItUYwXQGIG2mpnQcpULnbK67hH4ueEok4JItR1mBY4dN0jVDjadFSDz8MiW7RsnZrCKdW5ZbKKTpm/zuYclWW3SjStak6IgBtqgT2wuSo2O5I1ckI4ojLP5MaBsF4E5uXQuxB5ktf6vrriftP6ggY8g
+  learner_created: false
+- name: runConfigurations/Build.run.xml
+  visible: false
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Macros+/+Procedural+Macros+/+hello_macro_derive
+status: Unchecked
+record: -1
+post_submission_on_open: true

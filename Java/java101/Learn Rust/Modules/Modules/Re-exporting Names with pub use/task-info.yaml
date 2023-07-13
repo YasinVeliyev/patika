@@ -1,0 +1,16 @@
+type: theory
+files:
+- name: src/lib.rs
+  visible: true
+  learner_created: false
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfHrtnL8H0gU8kbshzoYg3rluDs2R0/5JE+hM5kQ4q+fCMHMbE1HWfU3jhWK27C2IXB9WV/iNQQw1LfaEkXsFj0NTbpQ6t7tv9V7o1phCYMPB
+  learner_created: false
+- name: runConfigurations/Build.run.xml
+  visible: false
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Modules+/+Modules+/+Re-exporting+Names+with+pub+use
+status: Unchecked
+record: -1
+post_submission_on_open: true

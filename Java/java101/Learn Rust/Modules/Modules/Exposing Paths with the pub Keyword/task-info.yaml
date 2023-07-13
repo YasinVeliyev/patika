@@ -1,0 +1,38 @@
+type: theory
+files:
+- name: Cargo.toml
+  visible: false
+  encrypted_text: m9XZNRB4SP+Ysnl4An4VfPsVvGqb4xFcKtiMx/p6oyFhFMiNH19ov4f02QkVB0+cQUXoIwlESIvV1hK5uRnJK1VLf6sT2CKL2EevGFELsYp3pstMs6t37j/1PXDHp0Po
+  learner_created: false
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 25
+    length: 3
+    placeholder_text: pub
+    initial_state:
+      length: 3
+      offset: 25
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: Ek5n1xVO6F+uh3wYJynyng==
+  - offset: 51
+    length: 3
+    placeholder_text: pub
+    initial_state:
+      length: 3
+      offset: 51
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: Ek5n1xVO6F+uh3wYJynyng==
+  learner_created: false
+- name: runConfigurations/Build.run.xml
+  visible: false
+  learner_created: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Modules+/+Modules+/+Exposing+Paths+with+the+pub+Keyword
+status: Unchecked
+record: -1
+solution_hidden: true
+post_submission_on_open: true
