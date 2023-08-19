@@ -1,0 +1,44 @@
+body{
+    background-color: #E9ECEF;
+    
+}
+
+.jumbotron {
+    background-color: #E9ECEF;
+}
+
+
+.navbar{
+    background-color: #474747
+}
+a.navbar-brand[href="/"]{
+    color:#908db4
+}
+a{
+    color:#bab7db
+}
+.urun.card{
+    height: 500px;
+}
+
+.card-img-top{
+    height: 60%;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card{
+    background-color: #E9ECEF;
+    margin-top: 3px;
+}
+
+h3{color:#bab7db}
+
+section{
+    display: flex;
+    flex-direction: column;
+}
