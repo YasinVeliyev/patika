@@ -1,0 +1,27 @@
+body {
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header {
+    border-bottom: 1px solid rgb(36, 36, 36);
+}
+
+.bg-yellow {
+    background-color: #ffc017;
+}
+
+.border-bottom-dark {
+    border-bottom: 1px solid rgb(36, 36, 36);
+}
+
+footer {
+    color: rgb(107, 107, 107);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+ul>li.list-inline-item.btn {
+    background-color: (242, 242, 242);
+}
