@@ -1,6 +1,25 @@
+body{
+  background-color: #faf6f0 !important;
+}
+
+
+header{
+  background-color: #ffffff;
+}
+
 .navbarbg {
-  height: 55px;
   background-color: white;
+  height: 55px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.sticky-top{
+  position:sticky;
+  top:60px !important;
+}
+i.fas{
+  font-size: 24px;
+  padding: 3px;
 }
 
 input.searche {
@@ -13,9 +32,11 @@ input.searche {
 input.searche::placeholder {
   font-size: 14px;
   color: gray;
-  background-image: url(/bootstraplinkedinclone/assets/search-solid.svg);
+  background-image: url(/static/svg/search-solid.svg);
   background-repeat: no-repeat;
   background-size: 7%;
+  background-position: 0;
+  background-position-x: 10px;
 }
 
 .body {
@@ -62,12 +83,15 @@ input.content {
   height: 45px;
 }
 input.content::placeholder {
+  
   font-weight: bolder;
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url(/bootstraplinkedinclone/assets/edit-regular.svg);
+  background-image: url(/static/svg/edit-regular.svg);
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 22px;
+  background-position: 0 10px;
+  background-position-x: 10px;
 }
 
 div.card {
@@ -126,5 +150,6 @@ button.ref:hover {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
   font-size: 14px;
-  margin-left: 8px;
+ 
 }
+
