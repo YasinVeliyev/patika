@@ -9,7 +9,7 @@ export default class Form extends Component {
     }
 
     onChange(event) {
-        this.setState((state) => {  
+        this.setState((state) => {
             return { form: { ...state.form, [event.target.name]: event.target.value } };
         });
     }
@@ -35,20 +35,44 @@ export default class Form extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <h1>{this.state.increase}</h1>
-                <form onSubmit={this.onSubmit}>
-                    <div>
-                        <input type="text" name="name" placeholder="Enter Name" onChange={this.onChange} value={this.state.form.name} />
+                <form className="m-auto" onSubmit={this.onSubmit} style={{ width: "50%" }}>
+                    <div className="form-group mb-2">
+                        <input
+                            className="form-control"
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Enter Name"
+                            onChange={this.onChange}
+                            value={this.state.form.name}
+                        />
+                    </div>
+                    <div className="form-group mb-2">
+                        <input
+                            className="form-control"
+                            type="text"
+                            name="surname"
+                            placeholder="Enter Surname"
+                            onChange={this.onChange}
+                            value={this.state.form.surname}
+                        />
+                    </div>
+                    <div className="form-group mb-2">
+                        <input
+                            className="form-control"
+                            type="phone"
+                            name="number"
+                            placeholder="Enter Number"
+                            onChange={this.onChange}
+                            value={this.state.form.number}
+                        />
                     </div>
                     <div>
-                        <input type="text" name="surname" placeholder="Enter Surname" onChange={this.onChange} value={this.state.form.surname} />
-                    </div>
-                    <div>
-                        <input type="phone" name="number" placeholder="Enter Number" onChange={this.onChange} value={this.state.form.number} />
-                    </div>
-                    <div>
-                        <button type="submit">Add</button>
+                        <button type="submit" className="btn btn-outline-success" style={{ width: "130px", height: "40px" }}>
+                            Add
+                        </button>
                     </div>
                 </form>
             </div>
