@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
 	res.send("hello");
 });
 
-let lastColor = "#282c34";
+let lastColor = "#282c33";
 
 io.on("connection", (socket) => {
 	console.log("bir kullanıcı bağlandı!");
