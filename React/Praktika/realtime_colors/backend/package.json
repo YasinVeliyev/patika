@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+<<<<<<<< HEAD:React/Praktika/realtime_colors/backend/package.json
     "start": "nodemon app.js"
+========
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+>>>>>>>> ca350ea (	modified:   .gitignore):React/Praktika/chat_app/backend/package.json
   },
   "keywords": [],
   "author": "Mehmet Seven <mehmetseven0@gmail.com>",
@@ -12,6 +17,12 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "socket.io": "^4.0.1"
+    "lodash": "^4.17.20",
+    "redis": "^3.0.2",
+    "shortid": "^2.2.16",
+    "socket.io": "^3.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
