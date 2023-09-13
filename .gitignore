@@ -13,3 +13,6 @@
 *.env
 *data
 *target
+React/Praktika/chat_app/node_modules
+React/Praktika/chat_app/backend/node_modules
+
