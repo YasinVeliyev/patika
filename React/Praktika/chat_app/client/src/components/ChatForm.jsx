@@ -1,12 +1,16 @@
 import React from "react";
 import { useState } from "react";
+import { sendMessage } from "../socketApi";
+import { useChat } from "../context/ChatContext";
 
 export default function ChatForm() {
 	const [message, setMessage] = useState("");
+	const { setMessages } = useChat();
 
 	function handleSubmit(event) {
 		event.preventDefault();
-		console.log(message);
+		setMessages((prevState) => [...prevState, { message, fromMe: true }]);
+		sendMessage(message);
 		setMessage("");
 	}
 
