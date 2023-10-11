@@ -2,11 +2,7 @@ import Boom from "boom";
 import User from "../../models/user";
 
 // helpers
-import {
-	signAccessToken,
-	signRefreshToken,
-	verifyRefreshToken,
-} from "../../helpers/jwt";
+import { signAccessToken, signRefreshToken, verifyRefreshToken } from "../../helpers/jwt";
 
 // validations
 import ValidationSchema from "./validations";
@@ -40,6 +36,11 @@ const Register = async (req, res, next) => {
 			role: user.role,
 		});
 		const refreshToken = await signRefreshToken(user._id);
+		console.log({
+			user: userData,
+			accessToken,
+			refreshToken,
+		});
 
 		res.json({
 			user: userData,

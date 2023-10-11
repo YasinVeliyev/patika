@@ -1,6 +1,7 @@
 import Product from "../../models/product";
 import Boom from "boom";
 import ProductSchema from "./validations";
+import mongoose from "mongoose";
 
 const Create = async (req, res, next) => {
 	const input = req.body;
@@ -79,11 +80,7 @@ const GetList = async (req, res, next) => {
 	const skip = (parseInt(page) - 1) * limit;
 
 	try {
-		const products = await Product.find({})
-			.sort({ createdAt: -1 })
-			.skip(skip)
-			.limit(limit);
-
+		const products = await Product.find({}).sort({ createdAt: -1 }).skip(skip).limit(limit);
 		res.json(products);
 	} catch (e) {
 		next(e);

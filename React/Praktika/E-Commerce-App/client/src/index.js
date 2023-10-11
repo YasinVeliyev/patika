@@ -1,14 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { ChakraProvider } from "@chakra-ui/react";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+import { AuthProvider, useAuth } from "./contexts/AuthContext";
+import { BasketProvider } from "./contexts/BasketContext";
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const queryClient = new QueryClient({
+	defaultOptions: {
+		queries: {
+			refetchOnMount: false,
+		},
+	},
+});
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+	<React.StrictMode>
+		<QueryClientProvider client={queryClient}>
+			<ChakraProvider>
+				<AuthProvider>
+					<App />
+				</AuthProvider>
+			</ChakraProvider>
+			<ReactQueryDevtools initialIsOpen={false} />
+		</QueryClientProvider>
+	</React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function
