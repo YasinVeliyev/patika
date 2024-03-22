@@ -52,16 +52,16 @@ export default function Weather() {
 					{weatherData.map((day, index) => (
 						<li className={`${index === 0 && "current-day"} day`} key={index}>
 							<div>{new Date(day.dt_txt).toString().split(" ")[0]}</div>
-							<img src={`https://openweathermap.org/img/w/${day.weather[0].icon}.png`} width={100} height={100} />
-							<div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
-								<small>
+							<img src={`https://openweathermap.org/img/w/${day.weather[0].icon}.png`} width={90} height={90} />
+							<div style={{ display: "flex", alignItems: "space-around", gap: "3px" }}>
+								<span>
 									{Math.trunc(day.main.temp_max)}
 									<sup>°</sup>/
-								</small>
-								<small>
+								</span>
+								<span>
 									{Math.trunc(day.main.temp_min)}
 									<sup>°</sup>
-								</small>
+								</span>
 							</div>
 						</li>
 					))}
