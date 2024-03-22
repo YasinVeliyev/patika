@@ -2,7 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: rgb(39, 39, 167);
+  color: rgb(233, 78, 17);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -70,10 +70,11 @@ button:focus-visible {
 
 select {
           padding: 10px;
-          border: none; 
-          border-radius: "0.25rem"; 
-          background-color: white;
+          border: 1px solid white;
+         
+          background-color: #d2e6f1;
           font-size: 16px;
+          color:white;
 }
 
 
@@ -84,7 +85,7 @@ li {
   flex-direction: column;
   align-items: center;
   list-style: none;
-  background-color: whitesmoke;
+  background-color: #d2e6f1;
   width: 150px;
   height: 150px;
   border-radius: 10px;

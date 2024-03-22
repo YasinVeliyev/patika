@@ -7,7 +7,7 @@ export default function City() {
 	return (
 		<div
 			className="city"
-			style={{ backgroundColor: "whitesmoke", padding: "1rem 2rem", borderRadius: "0.25rem", display: "flex", justifyContent: "center" }}
+			style={{ backgroundColor: "#d2e6f1", padding: "1rem 2rem", borderRadius: "0.25rem", display: "flex", justifyContent: "center" }}
 		>
 			<select name="cities" onChange={(e) => setCity(...cities.filter((city) => city.name === e.target.value))} value={city.name}>
 				{State.getStatesOfCountry("TR").map((city, index) => (

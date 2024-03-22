@@ -1,5 +1,6 @@
 import { useCity } from "../context/CityContext";
 import { useState, useEffect } from "react";
+import Spinner from "../../public/Spinner-1s-200px.svg";
 
 export default function Weather() {
 	const [weatherData, setWeatherData] = useState([]);
@@ -44,7 +45,9 @@ export default function Weather() {
 		<div className="container">
 			{loading && (
 				<div style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "3rem" }}>
-					<div className="loader"></div>
+					<div className="loader">
+						<img src={Spinner} alt="" />
+					</div>
 				</div>
 			)}
 			{!loading && (
