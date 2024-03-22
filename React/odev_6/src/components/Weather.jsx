@@ -15,7 +15,6 @@ export default function Weather() {
 		)
 			.then((response) => response.json())
 			.then((data) => {
-				console.log(data);
 				let tmp = {};
 				data.list.forEach((d) => {
 					let day = new Date(d.dt_txt).getDate();
@@ -31,7 +30,7 @@ export default function Weather() {
 						tmp[day] = d;
 					}
 				});
-				console.log(tmp);
+
 				setWeatherData(Object.values(tmp));
 			})
 			.catch((err) => {
@@ -54,10 +53,10 @@ export default function Weather() {
 						<li className={`${index === 0 && "current-day"} day`} key={index}>
 							<div>{new Date(day.dt_txt).toString().split(" ")[0]}</div>
 							<img src={`https://openweathermap.org/img/w/${day.weather[0].icon}.png`} width={100} height={100} />
-							<div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-								<small style={{ fontWeight: "bold" }}>
+							<div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
+								<small>
 									{Math.trunc(day.main.temp_max)}
-									<sup>°</sup>
+									<sup>°</sup>/
 								</small>
 								<small>
 									{Math.trunc(day.main.temp_min)}
