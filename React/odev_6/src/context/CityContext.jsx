@@ -8,7 +8,7 @@ function CityProvider({ children }) {
 	const cities = State.getStatesOfCountry("TR");
 	const [city, setCity] = useState(cities[0]);
 	const values = { city, setCity, cities };
-	console.log(city);
+
 	return <CityContext.Provider value={values}>{children}</CityContext.Provider>;
 }
 
