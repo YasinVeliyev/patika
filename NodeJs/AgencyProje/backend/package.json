@@ -1,0 +1,9 @@
+{
+  "name": "AgencyProje",
+  "version": "1.0.0",
+  "description": "Patika",
+  "main": "index.js",
+  "repository": "https://github.com/YasinVeliyev/patika",
+  "license": "MIT",
+  "private": null
+}
