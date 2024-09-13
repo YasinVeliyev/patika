@@ -1,0 +1,16 @@
+{"rest-client.environmentVariables":{
+    "$shared": {
+        "version": "v1"
+    },
+    "local": {
+        "version": "v2",
+        "host": "https://api.themoviedb.org/3",
+        "api_key": "56409472463fd3f7d0cfe115e28369ee",
+        "request_token":"f364cb89ea9bbc4457bd8e8d2ef795a81f6ee8f9",
+        "token":"eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NjQwOTQ3MjQ2M2ZkM2Y3ZDBjZmUxMTVlMjgzNjllZSIsIm5iZiI6MTcyMzQ4NzYyMC4xMDM5MDMsInN1YiI6IjYwZDBhNDcxOWEzYzQ5MDA3NDk5NDJiZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.YxhFEDvjbHKVb6xIn7Pi2JUGsxsMkHKJwaKrDknyU5s"
+    },
+    "production": {
+        "host": "example.com",
+        "secretKey" : "PRODSECRET"
+    }
+}}
