@@ -1,16 +1,24 @@
 <div class="portfolio-modal modal fade" id="project<%= project.id %>" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" />
+            </div>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
-                        <div class="modal-body" >
+                        <div class="modal-body">
                             <!-- Project details-->
-                            <h2 class="text-uppercase"><%= project.name %></h2>
-                            <p class="item-intro text-muted"><%= project.name %></p>
-                            <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/<%= project.img %>" alt="..." />
-                            <p><%= project.description %></p>
+                            <h2 class="text-uppercase">
+                                <%= project.name %>
+                            </h2>
+                            <p class="item-intro text-muted">
+                                <%= project.name %>
+                            </p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/<%= project.img %>"
+                                alt="..." />
+                            <p>
+                                <%= project.description %>
+                            </p>
                             <ul class="list-inline">
                                 <li>
                                     <strong>Client:</strong>
@@ -22,61 +30,74 @@
                                 </li>
                             </ul>
                             <div class="grid">
-                                <button type="button" class="btn btn-primary" onclick="update()">Update</button>
+                                <button type="button" class="btn btn-primary" onclick="update(event)">Update</button>
                                 <button type="button" class="btn btn-danger">Delete</button>
                             </div>
-                            
+
                         </div>
                         <form class="modal-body hidden">
                             <div class="mb-3">
-                             
-                              <input type="text" name='name' class="form-control" id="name" aria-describedby="Name" value = "<%= project.name %>">
+
+                                <input type="text" name='name' class="form-control" id="name" aria-describedby="Name"
+                                    value="<%= project.name %>">
                             </div>
                             <div class="mb-3">
-                              
-                              <textarea name="description" id="description" class="form-control"><%=project.description%></textarea>
+
+                                <textarea name="description" id="description"
+                                    class="form-control"><%=project.description%></textarea>
                             </div>
                             <div class="mb-3">
-                                
-                                <input type="text" name='client' class="form-control" id="client" aria-describedby="Client" value = "<%= project.client %>">
+
+                                <input type="text" name='client' class="form-control" id="client"
+                                    aria-describedby="Client" value="<%= project.client %>">
                             </div>
                             <div class="mb-3 mt-3">
-                               
+
                                 <select name="category" id="category" value="" class="form-select">
-                                    <option value="Illustration" <%= project.category=="Illustration"?"selected":"" %>>Illustration</option>
-                                    <option value="Graphic Design" <%= project.category=="Graphic Design"?"selected":"" %>>Graphic Design</option>
-                                    <option value="Identity" <%= project.category=="Identity"?"selected":"" %>>Identity</option>
-                                    <option value="Branding" <%= project.category=="Branding"?"selected":"" %>>Branding</option>
-                                    <option value="Website Design" <%= project.category=="Website Design"?"selected":"" %>>Website Design</option>
-                                    <option value="Photography" <%= project.category=="Photography"?"selected":"" %>>Photography</option>
+                                    <option value="Illustration" <%=project.category=="Illustration" ?"selected":"" %>
+                                        >Illustration</option>
+                                    <option value="Graphic Design" <%=project.category=="Graphic Design" ?"selected":""
+                                        %>>Graphic Design</option>
+                                    <option value="Identity" <%=project.category=="Identity" ?"selected":"" %>>Identity
+                                    </option>
+                                    <option value="Branding" <%=project.category=="Branding" ?"selected":"" %>>Branding
+                                    </option>
+                                    <option value="Website Design" <%=project.category=="Website Design" ?"selected":""
+                                        %>>Website Design</option>
+                                    <option value="Photography" <%=project.category=="Photography" ?"selected":"" %>
+                                        >Photography</option>
                                 </select>
-                                
+
                             </div>
                             <div class="mb-3">
-                               
+
                                 <input class="form-control" type="file" id="formFile">
-                              </div>
-                            <button type="submit" class="btn btn-primary">Update</button>
-                            <button  class="btn btn-info" onclick="update()">Reject</button>
-                          </form>
-                          <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button" >
-                            <i class="fas fa-xmark me-1"></i>
-                            Close Project
-                        </button>
+                            </div>
+
+                            <div>
+                                <button type="submit" class="btn btn-primary">Update</button>
+                                <button class="btn btn-info" onclick="update(event)">Reject</button>
+                            </div>
+
+                        </form>
+
                     </div>
-                   
+
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<script>
-    let div = document.querySelector("div.modal-body")
-    let form  =document.querySelector("form.modal-body")
+<!-- Modal -->
 
-    function update(){
-        div.classList.toggle("hidden")
-        form.classList.toggle("hidden")
-    }
+
+<script>
+
+
+
+
+
+
+
 </script>
